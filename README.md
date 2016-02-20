@@ -23,11 +23,11 @@ A environment and series of examples for learn about docker.
        https://docs.docker.com/machine/install-machine/
 
 * Run the following commands to prepare your laptop
-
-       docker-machine create --driver virtualbox tutorial
-       docker-machine ssh tutorial curl --silent -o /tmp/setup_lab.sh -L  https://raw.githubusercontent.com/timdaman/docker-tutorial/master/setup_lab.sh
-       docker-machine ssh tutorial /tmp/setup_lab.sh`
-
+```sh
+ docker-machine create --driver virtualbox tutorial
+ docker-machine ssh tutorial curl --silent -o /tmp/setup_lab.sh -L  https://raw.githubusercontent.com/timdaman/docker-tutorial/master/setup_lab.sh
+ docker-machine ssh tutorial /tmp/setup_lab.sh
+```
 The reason why I asking you to do this work ahead of time is because
 
 * I am going to dive straight into using Docker rather than wasting a lot of time showing how to install it. If you are not prepared you will fall behind.
