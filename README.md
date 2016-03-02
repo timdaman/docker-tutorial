@@ -25,8 +25,8 @@ A environment and series of examples for learn about docker.
 * Run the following commands to prepare your laptop
 ```sh
  docker-machine create --driver virtualbox tutorial
- docker-machine ssh tutorial curl --silent -o /tmp/setup_lab.sh -L  https://raw.githubusercontent.com/timdaman/docker-tutorial/master/setup_lab_ruby
- docker-machine ssh tutorial /tmp/setup_lab.sh
+ docker-machine ssh tutorial curl --silent -o /tmp/setup_lab.sh -L  https://raw.githubusercontent.com/timdaman/docker-tutorial/master/setup_lab.sh
+ docker-machine ssh tutorial bash /tmp/setup_lab.sh
  docker-machine stop tutorial
 ```
 The reason why I asking you to do this work ahead of time is because

@@ -1,5 +1,5 @@
 
-COPY todo-sample-app /usr/src/app
+COPY todo-sample-app-master /usr/src/app
 COPY database.yml /usr/src/app/config/
 COPY entrypoint.sh /
 CMD bash /entrypoint.sh
