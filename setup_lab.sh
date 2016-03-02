@@ -16,6 +16,6 @@ cd tutorial/Examples/5_second_docker_file/app &&\
 docker build . &&\
 cat Dockerfile-tail >> Dockerfile &&\
 rm Dockerfile-tail &&\
-echo 'PS1='\h:\W\$ ' >> ~/.profile
+echo "PS1='\h:\W\\$ '" >> ~/.profile &&\
 echo &&\
 echo "Congratulations, you are ready to learn about docker now"
