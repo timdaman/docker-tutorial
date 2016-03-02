@@ -11,7 +11,7 @@ wget -O todo.zip https://github.com/awslabs/todo-sample-app/archive/master.zip &
 unzip tutorial.zip &&\
 unzip -d docker-tutorial-master/Examples/Chapter_5_second_docker_file/app/ todo.zip &&\
 unzip -d docker-tutorial-master/Examples/Chapter_6_Bring_it_all_together/todo/app/ todo.zip &&\
-cd docker-tutorial/Examples/Chapter_5_second_docker_file/app &&\
+cd docker-tutorial-master/Examples/Chapter_5_second_docker_file/app &&\
 docker build . &&\
 cat Dockerfile-tail >> Dockerfile &&\
 echo &&\
