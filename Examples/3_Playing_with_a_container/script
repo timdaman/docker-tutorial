@@ -1,0 +1,25 @@
+getting a bash shell
+
+  docker run debian:jessie
+  docker run --name jessie -d debian:jessie sleep 1234
+  docker run -ti debian:jessie bash
+
+copying files in and out if containers
+
+  docker cp test_file jessie:/
+  docker cp jessie:/etc/hostname ./
+
+mounting directories
+  docker run --rm -v `pwd`/dir:/mnt -ti debian:jessie bash
+  docker run --rm -v `pwd`/dir:/mnt:ro -ti debian:jessie bash
+
+docker managed volumes
+  docker volume ls
+  docker volume create --name data
+  docker run --rm -v data:/mnt -ti debian:jessie bash
+  touch /mnt/hi
+  docker run --rm -v data:/mount -ti debian:jessie bash
+  docker volume rm data
+
+docker kill db-server
+docker rm db-server

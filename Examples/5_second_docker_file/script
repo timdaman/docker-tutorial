@@ -16,3 +16,15 @@ Explore networking and dns
   docker exec thing3 ping -c 1 thing4
 
 Install our app
+
+cd app
+
+docker build -t chap5-app
+docker network create chap5-net
+docker run --net chap5-net --name db -d  chap4-mysql
+docker run --net chap5-net --name app -p 80:3000 -d  chap5-app
+ip addr show eth1
+docker logs -f app
+
+show in browser
+docker rm -f app db

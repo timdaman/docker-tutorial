@@ -33,9 +33,9 @@ logs
   docker logs ae04d44d96fd
 
 exec
-  docker exec db-server ps
+  docker exec db-server ps -ef
   docker exec -ti db-server bash
 
 rmi
   docker images
-  docker rmi hellow-world
+  docker rmi hello-world

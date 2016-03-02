@@ -15,9 +15,9 @@ development:
 
 production:
   adapter: mysql2
-  database: chap5-db
+  database: our_data
   pool: 5
   timeout: 5000
-  host: db
-  user: todo_user
-  password: todo_secret
+  host: chap5-db
+  user: user
+  password: secret

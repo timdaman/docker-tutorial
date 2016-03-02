@@ -26,7 +26,7 @@ A environment and series of examples for learn about docker.
 ```sh
  docker-machine create --driver virtualbox tutorial
  docker-machine ssh tutorial curl --silent -o /tmp/setup_lab.sh -L  https://raw.githubusercontent.com/timdaman/docker-tutorial/master/setup_lab.sh
- docker-machine ssh tutorial bash /tmp/setup_lab.sh
+ docker-machine ssh tutorial sh /tmp/setup_lab.sh
  docker-machine stop tutorial
 ```
 The reason why I asking you to do this work ahead of time is because
@@ -37,28 +37,28 @@ The reason why I asking you to do this work ahead of time is because
 
 # Outline
 1. review of terms
-  image
-  layers
-  containers
+    image
+    layers
+    containers
 1. Basic docker commands
-  images
-  pull
-    Reuse of layers
-  run
-  ps
-  exec
-  rm
-  rmi
+    images
+    pull
+      Reuse of layers
+    run
+    ps
+    exec
+    rm
+    rmi
 1. Playing with a container
-  getting a bash shell
-  copying files in and out if containers
-  mounting volumes
+   getting a bash shell
+   copying files in and out if containers
+   mounting volumes
 1. Our first dockerfile
-  Making a mysql Dockerfile
-  exposing to network
+   Making a mysql Dockerfile
+   exposing to network
 1. Second docker file
-  Install our app
-  Explore networking and dns
+   Install our app
+   Explore networking and dns
 1. Bring it all together
-  Introduce compose
-  Private networks
+   Introduce compose
+   Private networks
