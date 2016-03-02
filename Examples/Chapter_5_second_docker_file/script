@@ -1,0 +1,18 @@
+
+Explore networking and dns
+
+  docker run --name thing1 -d debian:jessie sleep 1000
+  docker run --name thing2 -d debian:jessie sleep 1000
+  docker ping thing1
+  docker inspect thing1
+  docker exec thing2 ping -c 1 thing1
+  docker exec thing2 ping -c 1 172.17.0.2
+
+  docker network ls
+  docker network create thing-net
+  docker run --name thing3 --net thing-net -d debian:jessie sleep 1000
+  docker run --name thing4 --net thing-net -d debian:jessie sleep 1000
+  docker exec thing3 ping -c 1 thing4
+  docker exec thing3 ping -c 1 thing4
+
+Install our app

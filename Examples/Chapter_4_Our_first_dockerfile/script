@@ -1,0 +1,25 @@
+
+  FROM debian:jessie
+
+  RUN echo "Build at `date`" > /build.timestamp
+  ADD entrypoint.sh /
+  ENV MYSQL_ROOT_PASSWORD=secret
+  ENV MYSQL_DATABASE=wordpress
+  ENV MYSQL_USER=wordpress
+  ENV MYSQL_PASSWORD=wordpress_secret
+  ENV MYSQL_SERVER=db.example.com
+  RUN chmod +x entrypoint.sh
+  CMD  entrypoint.sh
+
+
+docker build -t chap4 .
+
+  FROM mysql:5.7
+  ENV MYSQL_ROOT_PASSWORD=secret
+  ENV MYSQL_DATABASE=wordpress
+  ENV MYSQL_USER=wordpress
+  ENV MYSQL_PASSWORD=wordpress_secret
+  ENV MYSQL_SERVER=db.example.com
+
+  docker build -t chap4-mysql .
+  docker tag -t chap4-mysql:5.7 chap4-mysql

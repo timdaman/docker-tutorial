@@ -1,1 +1,4 @@
 .vagrant
+Examples.old
+Examples/Chapter_5_second_docker_file/app/todo-sample-app/
+Examples/Chapter_6_Bring_it_all_together/todo/app/todo-sample-app/

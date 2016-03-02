@@ -1,0 +1,41 @@
+pull
+  Getting prebuilt stuff
+
+    docker pull hello-world
+    docker run hello-world
+
+images
+
+  docker images
+
+Finding stuff
+  https://hub.docker.com
+  Look for mysql
+  Image and version(they call them a tag!)
+  Lets read the doc
+
+  docker pull mysql:5.7
+  docker images
+
+
+run
+  docker run --name db-server -e MYSQL_ROOT_PASSWORD=password -d mysql:5.7
+
+ps
+  docker ps
+  docker ps -a
+
+rm
+  docker rm hello-world
+
+logs
+  docker logs db-server
+  docker logs ae04d44d96fd
+
+exec
+  docker exec db-server ps
+  docker exec -ti db-server bash
+
+rmi
+  docker images
+  docker rmi hellow-world

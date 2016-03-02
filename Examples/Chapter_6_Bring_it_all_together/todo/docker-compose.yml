@@ -1,0 +1,31 @@
+---
+version: '2'
+services:
+  chap6-app:
+    build: app
+    hostname: app
+    env_file: environment.txt
+    ports:
+      - "81:3000"
+    restart: always
+    networks:
+      - internal
+
+  chap6-db:
+    image: mysql:5.7
+    env_file:
+      environment.txt
+    volumes:
+      - mysql:/var/lib/mysql
+    # ports:
+    #     - '127.0.0.1:5432:5432'
+    networks:
+        - internal
+
+volumes:
+  mysql:
+    driver: local
+
+networks:
+  internal:
+    driver: bridge
