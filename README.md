@@ -36,29 +36,29 @@ The reason why I asking you to do this work ahead of time is because
 * This give you a chance to deal with any installation problems before coming to tutorial.
 
 # Outline
-1. review of terms
-    image
-    layers
-    containers
-1. Basic docker commands
-    images
-    pull
-      Reuse of layers
-    run
-    ps
-    exec
-    rm
-    rmi
-1. Playing with a container
-   getting a bash shell
-   copying files in and out if containers
+1. review of terms<br/>
+   image<br/>
+   layers<br/>
+   containers
+1. Basic docker commands<br/>
+   images<br/>
+   pull<br/>
+     Reuse of layers<br/>
+   run<br/>
+   ps<br/>
+   exec<br/>
+   rm<br/>
+   rmi
+1. Playing with a container<br/>
+   getting a bash shell<br/>
+   copying files in and out if containers<br/>
    mounting volumes
-1. Our first dockerfile
-   Making a mysql Dockerfile
+1. Our first dockerfile<br/>
+   Making a mysql Dockerfile<br/>
    exposing to network
-1. Second docker file
-   Install our app
+1. Second docker file<br/>
+   Install our app<br/>
    Explore networking and dns
-1. Bring it all together
-   Introduce compose
+1. Bring it all together<br/>
+   Introduce compose<br/>
    Private networks
