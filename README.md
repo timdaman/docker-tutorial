@@ -1,5 +1,5 @@
 # docker-tutorial
-A environment and series of examples for learn about docker.
+A environment and series of examples to learn about docker.
 
 # To participate in the tutorial you need
 1. a laptop with
