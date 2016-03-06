@@ -1,12 +1,16 @@
 
-  FROM mysql:5.7
+  FROM mysql:5.7.11
   ENV MYSQL_ROOT_PASSWORD=root_secret
   ENV MYSQL_DATABASE=our_data
   ENV MYSQL_USER=user
   ENV MYSQL_PASSWORD=secret
 
   docker build -t chap4-mysql .
-  docker tag -t chap4-mysql chap4-mysql:5.7
+  docker tag -t chap4-mysql:5.7 chap4-mysql
+
+  docker run --name chap4-db -d chap4-mysql
+
+
 
 
   FROM debian:jessie
@@ -16,6 +20,7 @@
   ADD nc /
   ENV CONFIGURATION=tutorial
   RUN chmod +x entrypoint.sh
+  EXPOSE 42
   CMD  entrypoint.sh
 
 
@@ -28,3 +33,5 @@ docker run --name chap4 -p 4242:42 -d chap4
 ./nc localhost 4242
 docker restart chap4
 ./nc localhost 4242
+docker rm chap4
+docker run --name chap4 -p 127.0.0.1:4242:42 -d chap4

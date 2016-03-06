@@ -10,6 +10,7 @@ copying files in and out if containers
   docker cp jessie:/etc/hostname ./
 
 mounting directories
+  echo `pwd`/dir
   docker run --rm -v `pwd`/dir:/mnt -ti debian:jessie bash
   docker run --rm -v `pwd`/dir:/mnt:ro -ti debian:jessie bash
 

@@ -9,23 +9,22 @@ services:
       - "80:3000"
     restart: always
     networks:
-      - internal
+      - chap5
 
   chap6-db:
-    image: mysql:5.7
-    env_file:
-      environment.txt
+    image: mysql:5.7.11
+    env_file: environment.txt
     volumes:
       - mysql:/var/lib/mysql
     # ports:
     #     - '127.0.0.1:5432:5432'
     networks:
-        - internal
+        - chap5
 
 volumes:
   mysql:
     driver: local
 
 networks:
-  internal:
+  chap5:
     driver: bridge

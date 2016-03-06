@@ -1,0 +1,18 @@
+$ whoami
+
+Start your docker-machine
+docker-machine start tutorial
+
+Who has seen my introduction to docker?
+Who has worked with docker before?
+
+Won't cover how it works
+
+
+Basic concepts/terminolgy
+
+Classes -runtime> instances
+
+Image -runtime> Container
+
+Image = Layers, one or more

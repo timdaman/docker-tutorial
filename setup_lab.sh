@@ -18,7 +18,7 @@ END
 
 sudo install -d -o docker -g staff /mnt/sda1/tutorial &&\
 sudo sh /var/lib/boot2docker/bootlocal.sh &&\
-docker pull mysql:5.7 &&\
+docker pull mysql:5.7.11 &&\
 docker pull ruby:2.0.0 &&\
 sudo curl  --silent -o /var/lib/boot2docker/docker-compose -L $COMPOSE_URL &&\
 sudo chmod +x /var/lib/boot2docker/docker-compose &&\
@@ -27,10 +27,14 @@ wget -O todo.tar.gz  $TODO_URL &&\
 tar --strip 1 -C tutorial/ -xzf tutorial.tar.gz &&\
 tar -C tutorial/Examples/5_second_docker_file/app/ -xzf todo.tar.gz &&\
 tar -C tutorial/Examples/6_Bring_it_all_together/todo/app/ -xzf todo.tar.gz &&\
-cd tutorial/Examples/5_second_docker_file/app &&\
+cd ~/tutorial/Examples/5_second_docker_file/app &&\
 docker build . &&\
 cat Dockerfile-tail >> Dockerfile &&\
 rm Dockerfile-tail &&\
+cd ~/tutorial/Examples/6_Bring_it_all_together/todo &&\
+docker-compose build chap6-app &&\
+cat app/Dockerfile-tail >> app/Dockerfile &&\
+rm app/Dockerfile-tail &&\
 echo &&\
 echo "Congratulations, you are ready to learn about docker now" &&\
 echo "You will need to restart the container before you start class"

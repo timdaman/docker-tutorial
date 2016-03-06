@@ -3,10 +3,10 @@ Explore networking and dns
 
   docker run --name thing1 -d debian:jessie sleep 1000
   docker run --name thing2 -d debian:jessie sleep 1000
-  docker ping thing1
+  ping thing1
   docker inspect thing1
   docker exec thing2 ping -c 1 thing1
-  docker exec thing2 ping -c 1 172.17.0.2
+  docker exec thing2 ping -c 1 172.17.0.4
 
   docker network ls
   docker network create thing-net
@@ -21,8 +21,8 @@ cd app
 
 docker build -t chap5-app
 docker network create chap5-net
-docker run --net chap5-net --name db -d  chap4-mysql
-docker run --net chap5-net --name app -p 80:3000 -d  chap5-app
+docker run --net chap5-net --name chap5-db -d  chap4-mysql
+docker run --net chap5-net --name chap5-app -p 80:3000 -d  chap5-app
 ip addr show eth1
 docker logs -f app
 

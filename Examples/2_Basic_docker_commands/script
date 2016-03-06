@@ -14,12 +14,12 @@ Finding stuff
   Image and version(they call them a tag!)
   Lets read the doc
 
-  docker pull mysql:5.7
+  docker pull mysql:5.7.11
   docker images
 
 
 run
-  docker run --name db-server -e MYSQL_ROOT_PASSWORD=password -d mysql:5.7
+  docker run --name db-server -e MYSQL_ROOT_PASSWORD=password -d mysql:5.7.11
 
 ps
   docker ps
