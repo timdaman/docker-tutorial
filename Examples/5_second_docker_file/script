@@ -24,7 +24,7 @@ docker network create chap5-net
 docker run --net chap5-net --name chap5-db -d  chap4-mysql
 docker run --net chap5-net --name chap5-app -p 80:3000 -d  chap5-app
 ip addr show eth1
-docker logs -f app
+docker logs app
 
 show in browser
-docker rm -f app db
+docker rm -f chap5-app chap5-db
